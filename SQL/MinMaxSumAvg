@@ -1,1 +1,57 @@
+# MIN, MAX, SUM, and AVG are known as Aggregate Functions. COUNT is another example of an aggregate function.
+
+# Aggregate Functions combine multiple rows of data into a single value.
+
+# Aggregate Functions are usually used with GROUP BY statements (and that is where they show their true power), but it's not necessary.
+
+
+
+#1. AVG Example:
+- Table Name: NumbersTable
+
+Id | Number
+-----------
+01 | 5.00000
+02 | 5.00000
+03 | 5.00000
+04 | 5.00000
+
+SELECT AVG(Number) FROM NumbersTable
+- Returns -> Avg Number = 5.00000
+
+
+
+#2. ROUND Example (use table in #1 as example):
+ROUND(Value you want to round, number of decimal places you want to round to)
+
+SELECT ROUND(AVG(Number), 2) FROM NumbersTable
+- If value returned was 5.00000, this function would allow you to return 5.00
+
+
+
+#3. MIN Example:
+- Table Name: NumbersVaryTable
+
+Id | Number
+-----------
+01 | 1
+02 | 2
+03 | 3
+04 | 4
+
+SELECT MIN(Number) FROM NumbersVaryTable
+- Returns -> 1
+
+
+
+#4. MAX Example (use table in #3 as example):
+SELECT MAX(Number) FROM NumbersVaryTable
+- Returns -> 4
+
+
+
+#5. SUM Example (use table in #3 as example):
+SELECT SUM(Number) FROM NumbersVaryTable
+- Returns -> 10
+
 
